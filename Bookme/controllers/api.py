@@ -9,14 +9,14 @@ from Bookme.models import User
 api = Blueprint('api', __name__)
 apis = Api(api)
 
-class TaskListAPI(Resource):
+class ReadListAPI(Resource):
     def get(self):
         return {'ta' : 'da'}
 
     def post(self):
         pass
 
-class TaskAPI(Resource):
+class ReadAPI(Resource):
     def get(self, id):
         return {'ta' : 'da'}
 

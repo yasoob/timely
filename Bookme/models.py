@@ -40,3 +40,12 @@ class User(db.Model, UserMixin):
 
     def __repr__(self):
         return '<User %r>' % self.username
+
+class ReadItem(db.Model, UserMixin):
+    id = db.Column(db.Integer(), primary_key=True)
+    title = db.Column(db.String())
+    tags = db.Column(db.String())
+
+    def __init__(self, username, password):
+        self.username = username
+        self.set_password(password)
